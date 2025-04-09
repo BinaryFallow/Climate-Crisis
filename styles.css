@@ -29,9 +29,31 @@ nav a {
   text-shadow: 6px 6px 6px rgba(0, 0, 0, 1);
 }
 
+nav a:active {
+  transform: scale(0.95);
+  color: #f9c56e;
+  text-shadow: 0 0 5px #ffcc66;
+}
+
+::selection {
+  background-color: #ffcc66;
+  color: #1d130e;
+}
+
+section p:first-of-type {
+  font-style: italic;
+  color: #ffcc66;
+}
+
 a:hover {
   color: #f9c56e;
   text-decoration: underline;
+}
+
+section:target {
+  border: 2px solid #f9c56e;
+  box-shadow: 0 0 15px #ffcc66;
+  transition: all 0.3s ease;
 }
 
 .content-img:hover {
@@ -80,6 +102,13 @@ header {
   color: white;
   text-align: right;
   margin-right: 1rem;
+}
+
+h2:hover::after {
+  content: ' 🔥';
+  color: #ffcc66;
+  font-size: 1.2rem;
+  padding-left: 0.3rem;
 }
 
 /* Firemap Section */
